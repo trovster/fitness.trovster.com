@@ -1,0 +1,36 @@
+<!doctype html>
+<html dir="ltr" lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <meta property="og:title" content="{{ site.title }}"/>
+        <meta property="og:description" name="description" content="{{ meta.description }}"/>
+        <meta property="og:image" content="{{ "/icon.png" | url | absoluteUrl(config.baseUrl) }}"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@trovster"/>
+        <meta name="keywords" content="{{ meta.keywords }}"/>
+        <meta name="apple-mobile-web-app-title" content="{{ site.title }}"/>
+        <meta name="application-name" content="{{ site.title }}"/>
+
+        <title>{{ site.title }} — {{ site.summary }}</title>
+
+        <script type="text/javascript">
+            document.getElementsByTagName('html')[0].className += ' js';
+        </script>
+
+        <link rel="stylesheet" href="{{ "/css/site.css" | url | absoluteUrl(config.baseUrl) }}"/>
+    </head>
+
+    <body class="bg-zinc-200 text-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 space-y-6 font-sans {{ bodyClass }}">
+        <main>
+            {{ content | safe }}
+        </main>
+
+        <footer class="py-6 text-sm text-zinc-400 text-center">
+            <div class="container vcard space-y-1">
+                <p>© 2023 <em class="fn not-italic">{{ site.author }}</em></p>
+            </div>
+        </footer>
+    </body>
+</html>

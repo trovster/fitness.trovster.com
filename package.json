@@ -1,0 +1,37 @@
+{
+  "name": "fitness.trovster.com",
+  "version": "1.0.0",
+  "description": "Fitness and Ring components, based on Apple Fitness.",
+  "homepage": "https://fitness.trovster.com",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trovster/fitness.trovster.com.git"
+  },
+  "author": {
+    "name": "Trevor Morris",
+    "email": "code@trovster.com",
+    "url": "https://www.trovster.com"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "tailwindcss",
+    "fitness",
+    "health"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "start": "npx tailwindcss -i ./src/css/site.css -c tailwind.config.js -o ./dist/css/site.css --watch & npx @11ty/eleventy --serve",
+    "build": "NODE_ENV=production npx tailwindcss -i ./src/css/site.css -c tailwind.config.js -o ./dist/css/site.css --minify && MY_ENVIRONMENT=production npx @11ty/eleventy",
+    "test": "echo \"Warning: No tests\" && exit 0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-fetch": "^4.0.0",
+    "autoprefixer": "^10.4.16",
+    "dotenv": "^16.3.1",
+    "tailwindcss": "^3.3.3"
+  }
+}
+

@@ -1,0 +1,75 @@
+<section class="text-center p-6 space-y-6">
+    <h1 class="text-6xl md:text-8xl tracking-tight font-display font-black text-center">
+        {{ site.title }}
+    </h1>
+
+    <p class="md:text-xl">{{ site.summary }}</p>
+
+    <div>
+        <ul class="space-y-6">
+            {% for item in fitness.data %}
+            <li>
+                <div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left">
+                    <div class="pb-6 px-6 border-b-2 border-zinc-400 text-center text-lg sm:text-2xl">
+                        {{ item.date | dateFormat }}
+                    </div>
+
+                    <div class="flex flex-col gap-4 items-center px-6 sm:flex-row sm:justify-evenly">
+                        <div>
+                            <dl class="relative text-2xl leading-tight space-y-4">
+                                <div>
+                                    <dt>Move</dt>
+                                    <dd class="text-move ">{{ item.move.total | formattedNumber }}/{{ item.move.goal | formattedNumber }}<abbr title="Kilocalories" class="uppercase text-base ml-1 no-underline">Kcal</abbr></dd>
+                                </div>
+                                <div>
+                                    <dt>Exercise</dt>
+                                    <dd class="text-exercise">{{ item.exercise.total | formattedNumber }}/{{ item.exercise.goal | formattedNumber }}<abbr title="Minutes" class="uppercase text-base ml-1 no-underline">min</abbr></dd>
+                                </div>
+                                <div>
+                                    <dt>Stand</dt>
+                                    <dd class="text-stand">{{ item.stand.total | formattedNumber }}/{{ item.stand.goal | formattedNumber }}<abbr title="Hours" class="uppercase text-base ml-1 no-underline">hrs</abbr></dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="relative w-full max-w-xs">
+                            <svg viewBox="0 0 36 36" class="relative block mx-auto" data-stand="{{ item.stand.percent }}" data-exercise="{{ item.exercise.percent }}" data-move="{{ item.move.percent }}">
+                                <g class="origin-center -rotate-90">
+                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
+                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 animate-move" stroke-linecap="round" stroke-dashoffset="{{ item.move.percent | percent }}" stroke-dasharray="{{ item.move.percent | percent }}, 100" />
+                                </g>
+                                <g class="origin-center -rotate-90">
+                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
+                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 animate-exercise" stroke-linecap="round" stroke-dashoffset="{{ item.exercise.percent | percent }}" stroke-dasharray="{{ item.exercise.percent | percent }}, 100" />
+                                </g>
+                                <g class="origin-center -rotate-90">
+                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
+                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 animate-stand" stroke-linecap="round" stroke-dashoffset="{{ item.stand.percent | percent }}" stroke-dasharray="{{ item.stand.percent | percent }}, 100" />
+                                </g>
+                                <span class="icon stroke-white fill-white @apply animate-pulse-once"></span>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 px-6 border-t-2 border-zinc-400">
+                        <dl class="relative text-2xl leading-tight space-y-6 flex flex-col justify-evenly text-center sm:flex-row sm:space-y-0 sm:space-x-6">
+                            <div>
+                                <dt>Steps</dt>
+                                <dd class="text-gray-400">{{ item.step_count | formattedNumber }}</dd>
+                            </div>
+                            <div>
+                                <dt>Distance</dt>
+                                <dd class="text-gray-400">{{ item.distance | miles | formattedNumber(2) }}<abbr title="Miles" class="uppercase text-base ml-1 no-underline">mi</abbr></dd>
+                            </div>
+                            <div>
+                                <dt>Flights</dt>
+                                <dd class="text-gray-400">{{ item.flights_climbed | formattedNumber }}</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
