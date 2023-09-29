@@ -1,7 +1,7 @@
 {
   "name": "fitness.trovster.com",
   "version": "1.0.0",
-  "description": "Fitness and Ring components, based on Apple Fitness.",
+  "description": "Fitness and Ring Web Components.",
   "homepage": "https://fitness.trovster.com",
   "private": true,
   "repository": {
@@ -28,10 +28,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-fetch": "^4.0.0",
-    "autoprefixer": "^10.4.16",
     "dotenv": "^16.3.1",
     "tailwindcss": "^3.3.3"
   }
 }
-

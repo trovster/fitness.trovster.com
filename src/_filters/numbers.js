@@ -7,13 +7,10 @@ module.exports = {
   miles: number => {
     return number * 0.000621371192
   },
-  hours: number => {
-    return number
+  percent: (data, fractions = 0) => {
+    return (data.total / data.goal * 100).toFixed(fractions)
   },
-  minutes: number => {
-    return number * 60
-  },
-  percent: number => {
-    return number >= 100 ? 100 : number
-  },
+  max: (number, max = 100) => {
+    return number >= max ? max : number
+  }
 }

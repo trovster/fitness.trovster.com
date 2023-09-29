@@ -1,5 +1,9 @@
-# Fitness
+# Fitness Web Component
 
-A simple website, using an API to build up Fitness and Ring components, based on Apple Fitness.
+Simple Web Components for fitness card and rings.
 
-Built using Eleventy, using Tailwind.
+The components are built styled using [Tailwind](https://tailwindcss.com) and
+the icons are from [Heroicons](https://heroicons.com). The design is based on
+Apple Fitness.
+
+This website is built using [Eleventy](https://www.11ty.dev).
