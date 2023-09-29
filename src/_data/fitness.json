@@ -2,7 +2,6 @@
   "data": [
     {
       "date": "2023-09-25T00:00:00+00:00",
-      "summary": "I took 18,935 steps, walked 10.10 miles and climbed 8 flights on 25/09/2023",
       "step_count": 18935,
       "distance": 16254,
       "flights_climbed": 8,
@@ -21,7 +20,6 @@
     },
     {
       "date": "2023-09-26T00:00:00+00:00",
-      "summary": "I took 10,639 steps, walked 5.57 miles and climbed 5 flights on 26/09/2023",
       "step_count": 10639,
       "distance": 8964,
       "flights_climbed": 5,
