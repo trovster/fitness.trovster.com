@@ -4,40 +4,67 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <meta property="og:title" content="Fitness"/>
+        <meta property="og:title" content="Fitness Web Components"/>
         <meta property="og:description" name="description" content="Fitness."/>
         <meta property="og:image" content="https://fitness.trovster.com/icon.png"/>
         <meta name="twitter:card" content="summary"/>
         <meta name="twitter:site" content="@trovster"/>
         <meta name="keywords" content="trovster, fitness, health"/>
-        <meta name="apple-mobile-web-app-title" content="Fitness"/>
-        <meta name="application-name" content="Fitness"/>
+        <meta name="apple-mobile-web-app-title" content="Fitness Web Components"/>
+        <meta name="application-name" content="Fitness Web Components"/>
 
-        <title>Fitness — Fitness and Ring components, based on Apple Fitness.</title>
+        <title>Fitness Web Components — Simple Web Components for fitness cards and rings.</title>
 
         <script type="text/javascript">
             document.getElementsByTagName('html')[0].className += ' js';
         </script>
 
         <link rel="stylesheet" href="https://fitness.trovster.com/css/site.css"/>
+        <link rel="stylesheet" href="https://fitness.trovster.com/css/prism-theme.css"/>
     </head>
 
     <body class="bg-zinc-200 text-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 space-y-6 font-sans ">
         <main>
-            <section class="text-center p-6 space-y-6">
-    <h1 class="text-6xl md:text-8xl tracking-tight font-display font-black text-center">
-        Fitness
-    </h1>
+            <section class="p-6 space-y-6">
+    <div class="max-w-4xl mx-auto space-y-6 text-center">
+        <h1 class="tracking-tight leading-none font-display font-black text-6xl md:text-8xl">
+            Fitness Web Components
+        </h1>
 
-    <p class="md:text-xl">Fitness and Ring components, based on Apple Fitness.</p>
+        <p class="text-lg md:text-xl">Simple Web Components for fitness cards and rings.</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-2">
+        <h2 class="tracking-tight leading-none font-display font-bold text-center text-2xl md:text-4xl">The Code</h2>
+        <p class="text-center md:text-lg">Each component expects a JSON payload shape that looks like the following.</p>
+
+        <pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+	<span class="token property">"date"</span><span class="token operator">:</span> <span class="token string">"2023-09-25T00:00:00+00:00"</span><span class="token punctuation">,</span>
+	<span class="token property">"step_count"</span><span class="token operator">:</span> <span class="token number">18935</span><span class="token punctuation">,</span>
+	<span class="token property">"distance"</span><span class="token operator">:</span> <span class="token number">16254</span><span class="token punctuation">,</span>
+	<span class="token property">"flights_climbed"</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+	<span class="token property">"move"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">"total"</span><span class="token operator">:</span> <span class="token number">500</span><span class="token punctuation">,</span>
+		<span class="token property">"goal"</span><span class="token operator">:</span> <span class="token number">750</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token property">"exercise"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">"total"</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+		<span class="token property">"goal"</span><span class="token operator">:</span> <span class="token number">60</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token property">"stand"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token property">"total"</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+		<span class="token property">"goal"</span><span class="token operator">:</span> <span class="token number">10</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+    </div>
 
     <div>
         <ul class="space-y-6">
             
             <li>
-                <div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left">
+                <div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left font-mono">
                     <div class="pb-6 px-6 border-b-2 border-zinc-400 text-center text-lg sm:text-2xl">
-                        Wednesday, 27 September 2023
+                        Monday, 25 September 2023
                     </div>
 
                     <div class="flex flex-col gap-4 items-center px-6 sm:flex-row sm:justify-evenly">
@@ -45,32 +72,32 @@
                             <dl class="relative text-2xl leading-tight space-y-4">
                                 <div>
                                     <dt>Move</dt>
-                                    <dd class="text-move ">863/650<abbr title="Kilocalories" class="uppercase text-base ml-1 no-underline">Kcal</abbr></dd>
+                                    <dd class="text-move ">500/750<abbr title="Kilocalories" class="uppercase text-base ml-1 no-underline">Kcal</abbr></dd>
                                 </div>
                                 <div>
                                     <dt>Exercise</dt>
-                                    <dd class="text-exercise">61/30<abbr title="Minutes" class="uppercase text-base ml-1 no-underline">min</abbr></dd>
+                                    <dd class="text-exercise">30/60<abbr title="Minutes" class="uppercase text-base ml-1 no-underline">min</abbr></dd>
                                 </div>
                                 <div>
                                     <dt>Stand</dt>
-                                    <dd class="text-stand">16/12<abbr title="Hours" class="uppercase text-base ml-1 no-underline">hrs</abbr></dd>
+                                    <dd class="text-stand">8/10<abbr title="Hours" class="uppercase text-base ml-1 no-underline">hrs</abbr></dd>
                                 </div>
                             </dl>
                         </div>
 
                         <div class="relative w-full max-w-xs">
-                            <svg viewBox="0 0 36 36" class="relative block mx-auto" data-stand="133" data-exercise="203" data-move="133">
+                            <svg viewBox="0 0 36 36" class="relative block mx-auto" data-stand="80" data-exercise="50" data-move="67">
                                 <g class="origin-center -rotate-90">
                                     <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 animate-move" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
+                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 animate-move" stroke-linecap="round" stroke-dashoffset="67" stroke-dasharray="67, 100" />
                                 </g>
                                 <g class="origin-center -rotate-90">
                                     <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 animate-exercise" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
+                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 animate-exercise" stroke-linecap="round" stroke-dashoffset="50" stroke-dasharray="50, 100" />
                                 </g>
                                 <g class="origin-center -rotate-90">
                                     <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 animate-stand" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
+                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 animate-stand" stroke-linecap="round" stroke-dashoffset="80" stroke-dasharray="80, 100" />
                                 </g>
                                 <span class="icon stroke-white fill-white @apply animate-pulse-once"></span>
                             </svg>
@@ -81,15 +108,15 @@
                         <dl class="relative text-2xl leading-tight space-y-6 flex flex-col justify-evenly text-center sm:flex-row sm:space-y-0 sm:space-x-6">
                             <div>
                                 <dt>Steps</dt>
-                                <dd class="text-gray-400">9,511</dd>
+                                <dd class="text-gray-400">18,935</dd>
                             </div>
                             <div>
                                 <dt>Distance</dt>
-                                <dd class="text-gray-400">4.98<abbr title="Miles" class="uppercase text-base ml-1 no-underline">mi</abbr></dd>
+                                <dd class="text-gray-400">10.1<abbr title="Miles" class="uppercase text-base ml-1 no-underline">mi</abbr></dd>
                             </div>
                             <div>
                                 <dt>Flights</dt>
-                                <dd class="text-gray-400">6</dd>
+                                <dd class="text-gray-400">8</dd>
                             </div>
                         </dl>
                     </div>
@@ -97,7 +124,7 @@
             </li>
             
             <li>
-                <div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left">
+                <div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left font-mono">
                     <div class="pb-6 px-6 border-b-2 border-zinc-400 text-center text-lg sm:text-2xl">
                         Tuesday, 26 September 2023
                     </div>
@@ -152,254 +179,6 @@
                             <div>
                                 <dt>Flights</dt>
                                 <dd class="text-gray-400">5</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-            </li>
-            
-            <li>
-                <div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left">
-                    <div class="pb-6 px-6 border-b-2 border-zinc-400 text-center text-lg sm:text-2xl">
-                        Monday, 25 September 2023
-                    </div>
-
-                    <div class="flex flex-col gap-4 items-center px-6 sm:flex-row sm:justify-evenly">
-                        <div>
-                            <dl class="relative text-2xl leading-tight space-y-4">
-                                <div>
-                                    <dt>Move</dt>
-                                    <dd class="text-move ">1,472/650<abbr title="Kilocalories" class="uppercase text-base ml-1 no-underline">Kcal</abbr></dd>
-                                </div>
-                                <div>
-                                    <dt>Exercise</dt>
-                                    <dd class="text-exercise">144/30<abbr title="Minutes" class="uppercase text-base ml-1 no-underline">min</abbr></dd>
-                                </div>
-                                <div>
-                                    <dt>Stand</dt>
-                                    <dd class="text-stand">15/12<abbr title="Hours" class="uppercase text-base ml-1 no-underline">hrs</abbr></dd>
-                                </div>
-                            </dl>
-                        </div>
-
-                        <div class="relative w-full max-w-xs">
-                            <svg viewBox="0 0 36 36" class="relative block mx-auto" data-stand="125" data-exercise="480" data-move="226">
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 animate-move" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 animate-exercise" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 animate-stand" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <span class="icon stroke-white fill-white @apply animate-pulse-once"></span>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="pt-6 px-6 border-t-2 border-zinc-400">
-                        <dl class="relative text-2xl leading-tight space-y-6 flex flex-col justify-evenly text-center sm:flex-row sm:space-y-0 sm:space-x-6">
-                            <div>
-                                <dt>Steps</dt>
-                                <dd class="text-gray-400">18,935</dd>
-                            </div>
-                            <div>
-                                <dt>Distance</dt>
-                                <dd class="text-gray-400">10.1<abbr title="Miles" class="uppercase text-base ml-1 no-underline">mi</abbr></dd>
-                            </div>
-                            <div>
-                                <dt>Flights</dt>
-                                <dd class="text-gray-400">8</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-            </li>
-            
-            <li>
-                <div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left">
-                    <div class="pb-6 px-6 border-b-2 border-zinc-400 text-center text-lg sm:text-2xl">
-                        Sunday, 24 September 2023
-                    </div>
-
-                    <div class="flex flex-col gap-4 items-center px-6 sm:flex-row sm:justify-evenly">
-                        <div>
-                            <dl class="relative text-2xl leading-tight space-y-4">
-                                <div>
-                                    <dt>Move</dt>
-                                    <dd class="text-move ">1,150/650<abbr title="Kilocalories" class="uppercase text-base ml-1 no-underline">Kcal</abbr></dd>
-                                </div>
-                                <div>
-                                    <dt>Exercise</dt>
-                                    <dd class="text-exercise">105/30<abbr title="Minutes" class="uppercase text-base ml-1 no-underline">min</abbr></dd>
-                                </div>
-                                <div>
-                                    <dt>Stand</dt>
-                                    <dd class="text-stand">16/12<abbr title="Hours" class="uppercase text-base ml-1 no-underline">hrs</abbr></dd>
-                                </div>
-                            </dl>
-                        </div>
-
-                        <div class="relative w-full max-w-xs">
-                            <svg viewBox="0 0 36 36" class="relative block mx-auto" data-stand="133" data-exercise="350" data-move="177">
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 animate-move" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 animate-exercise" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 animate-stand" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <span class="icon stroke-white fill-white @apply animate-pulse-once"></span>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="pt-6 px-6 border-t-2 border-zinc-400">
-                        <dl class="relative text-2xl leading-tight space-y-6 flex flex-col justify-evenly text-center sm:flex-row sm:space-y-0 sm:space-x-6">
-                            <div>
-                                <dt>Steps</dt>
-                                <dd class="text-gray-400">14,034</dd>
-                            </div>
-                            <div>
-                                <dt>Distance</dt>
-                                <dd class="text-gray-400">7.39<abbr title="Miles" class="uppercase text-base ml-1 no-underline">mi</abbr></dd>
-                            </div>
-                            <div>
-                                <dt>Flights</dt>
-                                <dd class="text-gray-400">27</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-            </li>
-            
-            <li>
-                <div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left">
-                    <div class="pb-6 px-6 border-b-2 border-zinc-400 text-center text-lg sm:text-2xl">
-                        Saturday, 23 September 2023
-                    </div>
-
-                    <div class="flex flex-col gap-4 items-center px-6 sm:flex-row sm:justify-evenly">
-                        <div>
-                            <dl class="relative text-2xl leading-tight space-y-4">
-                                <div>
-                                    <dt>Move</dt>
-                                    <dd class="text-move ">2,098/650<abbr title="Kilocalories" class="uppercase text-base ml-1 no-underline">Kcal</abbr></dd>
-                                </div>
-                                <div>
-                                    <dt>Exercise</dt>
-                                    <dd class="text-exercise">218/30<abbr title="Minutes" class="uppercase text-base ml-1 no-underline">min</abbr></dd>
-                                </div>
-                                <div>
-                                    <dt>Stand</dt>
-                                    <dd class="text-stand">15/12<abbr title="Hours" class="uppercase text-base ml-1 no-underline">hrs</abbr></dd>
-                                </div>
-                            </dl>
-                        </div>
-
-                        <div class="relative w-full max-w-xs">
-                            <svg viewBox="0 0 36 36" class="relative block mx-auto" data-stand="125" data-exercise="727" data-move="323">
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 animate-move" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 animate-exercise" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 animate-stand" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <span class="icon stroke-white fill-white @apply animate-pulse-once"></span>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="pt-6 px-6 border-t-2 border-zinc-400">
-                        <dl class="relative text-2xl leading-tight space-y-6 flex flex-col justify-evenly text-center sm:flex-row sm:space-y-0 sm:space-x-6">
-                            <div>
-                                <dt>Steps</dt>
-                                <dd class="text-gray-400">9,516</dd>
-                            </div>
-                            <div>
-                                <dt>Distance</dt>
-                                <dd class="text-gray-400">4.85<abbr title="Miles" class="uppercase text-base ml-1 no-underline">mi</abbr></dd>
-                            </div>
-                            <div>
-                                <dt>Flights</dt>
-                                <dd class="text-gray-400">41</dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
-            </li>
-            
-            <li>
-                <div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left">
-                    <div class="pb-6 px-6 border-b-2 border-zinc-400 text-center text-lg sm:text-2xl">
-                        Friday, 22 September 2023
-                    </div>
-
-                    <div class="flex flex-col gap-4 items-center px-6 sm:flex-row sm:justify-evenly">
-                        <div>
-                            <dl class="relative text-2xl leading-tight space-y-4">
-                                <div>
-                                    <dt>Move</dt>
-                                    <dd class="text-move ">1,155/650<abbr title="Kilocalories" class="uppercase text-base ml-1 no-underline">Kcal</abbr></dd>
-                                </div>
-                                <div>
-                                    <dt>Exercise</dt>
-                                    <dd class="text-exercise">109/30<abbr title="Minutes" class="uppercase text-base ml-1 no-underline">min</abbr></dd>
-                                </div>
-                                <div>
-                                    <dt>Stand</dt>
-                                    <dd class="text-stand">17/12<abbr title="Hours" class="uppercase text-base ml-1 no-underline">hrs</abbr></dd>
-                                </div>
-                            </dl>
-                        </div>
-
-                        <div class="relative w-full max-w-xs">
-                            <svg viewBox="0 0 36 36" class="relative block mx-auto" data-stand="142" data-exercise="363" data-move="178">
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 animate-move" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 animate-exercise" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <g class="origin-center -rotate-90">
-                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25" />
-                                    <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 animate-stand" stroke-linecap="round" stroke-dashoffset="100" stroke-dasharray="100, 100" />
-                                </g>
-                                <span class="icon stroke-white fill-white @apply animate-pulse-once"></span>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="pt-6 px-6 border-t-2 border-zinc-400">
-                        <dl class="relative text-2xl leading-tight space-y-6 flex flex-col justify-evenly text-center sm:flex-row sm:space-y-0 sm:space-x-6">
-                            <div>
-                                <dt>Steps</dt>
-                                <dd class="text-gray-400">14,361</dd>
-                            </div>
-                            <div>
-                                <dt>Distance</dt>
-                                <dd class="text-gray-400">7.61<abbr title="Miles" class="uppercase text-base ml-1 no-underline">mi</abbr></dd>
-                            </div>
-                            <div>
-                                <dt>Flights</dt>
-                                <dd class="text-gray-400">23</dd>
                             </div>
                         </dl>
                     </div>
