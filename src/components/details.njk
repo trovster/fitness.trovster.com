@@ -1,0 +1,22 @@
+<dl class="relative text-2xl leading-tight space-y-4">
+    <div>
+        <dt>Move</dt>
+        <dd class="text-move ">{{ move.total | formattedNumber }}/{{ move.goal | formattedNumber }}
+            <abbr title="Kilocalories" class="uppercase text-base ml-1 no-underline">Kcal</abbr>
+        </dd>
+    </div>
+
+    <div>
+        <dt>Exercise</dt>
+        <dd class="text-exercise">{{ exercise.total | formattedNumber }}/{{ exercise.goal | formattedNumber }}
+            <abbr title="Minutes" class="uppercase text-base ml-1 no-underline">min</abbr>
+        </dd>
+    </div>
+
+    <div>
+        <dt>Stand</dt>
+        <dd class="text-stand">{{ stand.total | formattedNumber }}/{{ stand.goal | formattedNumber }}
+            <abbr title="Hours" class="uppercase text-base ml-1 no-underline">hrs</abbr>
+        </dd>
+    </div>
+</dl>

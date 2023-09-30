@@ -1,0 +1,21 @@
+
+<svg viewBox="0 0 36 36" class="relative block mx-auto" data-stand="{{ stand | percent }}" data-exercise="{{ exercise | percent }}" data-move="{{ move | percent }}">
+    <g class="origin-center -rotate-90">
+        <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25"/>
+        <circle stroke-width="3" r="16" class="stroke-move scale-100 fill-transparent translate-x-1/2 translate-y-1/2 animate-move" stroke-linecap="round" stroke-dashoffset="{{ move | percent | max }}" stroke-dasharray="{{ move | percent | max }}, 100"/>
+    </g>
+
+    <g class="origin-center -rotate-90">
+        <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25"/>
+        <circle stroke-width="4" r="16" class="stroke-exercise scale-75 fill-transparent translate-x-1/2 translate-y-1/2 animate-exercise" stroke-linecap="round" stroke-dashoffset="{{ exercise | percent | max }}" stroke-dasharray="{{ exercise | percent | max }}, 100"/>
+    </g>
+
+    <g class="origin-center -rotate-90">
+        <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 opacity-25"/>
+        <circle stroke-width="6" r="16" class="stroke-stand scale-50 fill-transparent translate-x-1/2 translate-y-1/2 animate-stand" stroke-linecap="round" stroke-dashoffset="{{ stand | percent | max }}" stroke-dasharray="{{ stand | percent | max }}, 100"/>
+    </g>
+
+    {% svg 'move', { width: 2, height: 2, x: 17, y: 1, class: 'stroke-white fill-white @apply animate-pulse-once' } %}
+    {% svg 'exercise', { width: 2, height: 2, x: 17, y: 5, class: 'stroke-white fill-white @apply animate-pulse-once' } %}
+    {% svg 'stand', { width: 2, height: 2, x: 17, y: 9, class: 'stroke-white fill-white @apply animate-pulse-once' } %}
+</svg>

@@ -1,0 +1,19 @@
+<div class="py-6 space-y-6 rounded-2xl mx-auto bg-gray-800 text-white text-center max-w-3xl sm:text-left font-mono">
+    <div class="pb-6 px-6 border-b-2 border-zinc-400 text-center text-lg sm:text-2xl">
+        {% renderFile './src/components/header.njk', { date: date } %}
+    </div>
+
+    <div class="flex flex-col gap-4 items-center px-6 sm:flex-row sm:justify-evenly">
+        <div>
+            {% renderFile './src/components/details.njk', { move: move, exercise: exercise, stand: stand } %}
+        </div>
+
+        <div class="relative w-full max-w-xs">
+            {% renderFile './src/components/ring.njk', { move: move, exercise: exercise, stand: stand } %}
+        </div>
+    </div>
+
+    <div class="pt-6 px-6 border-t-2 border-zinc-400">
+        {% renderFile './src/components/footer.njk', { steps: step_count, distance: distance, flights: flights_climbed } %}
+    </div>
+</div>
