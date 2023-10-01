@@ -22,9 +22,9 @@ module.exports = {
         }
       },
       animation: {
-        move: 'ring 950ms 550ms ease-in-out forwards',
+        move: 'ring 1450ms 50ms ease-in-out forwards',
         exercise: 'ring 1200ms 300ms ease-in-out forwards',
-        stand: 'ring 1450ms 50ms ease-in-out forwards',
+        stand: 'ring 950ms 550ms ease-in-out forwards',
         'pulse-once': 'pulse 1000ms linear'
       }
     },
