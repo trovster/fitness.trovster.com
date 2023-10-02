@@ -1,8 +1,8 @@
 {
     "date": "2023-09-25T00:00:00+00:00",
-    "step_count": 18935,
+    "steps": 18935,
     "distance": 16254,
-    "flights_climbed": 8,
+    "flights": 8,
     "move": {
         "total": 500,
         "goal": 750

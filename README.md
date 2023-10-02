@@ -10,16 +10,26 @@ This website is built using [Eleventy](https://www.11ty.dev).
 
 ## The Code
 
-The components loop through the `fitness.json` dataset.
+There are two main web components; a ring and a fully featured card.
 
-Each component expects a JSON payload shape that looks like the following.
+```html
+<fitness-ring data="{ move, exercise, stand }">
+</fitness-ring>
+
+<fitness-card data="{ ...json }">
+</fitness-card>
+```
+
+In this 11ty codebase, the components loop through the `fitness.json` dataset.
+
+Each card component expects JSON data that looks like the following.
 
 ```json
 {
     "date": "2023-09-25T00:00:00+00:00",
-    "step_count": 18935,
+    "steps": 18935,
     "distance": 16254,
-    "flights_climbed": 8,
+    "flights": 8,
     "move": {
         "total": 500,
         "goal": 750
