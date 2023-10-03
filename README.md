@@ -13,10 +13,10 @@ This website is built using [Eleventy](https://www.11ty.dev).
 There are two main web components; a ring and a fully featured card.
 
 ```html
-<fitness-ring data="{ move, exercise, stand }">
+<fitness-ring>
 </fitness-ring>
 
-<fitness-card data="{ ...json }">
+<fitness-card>
 </fitness-card>
 ```
 
