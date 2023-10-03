@@ -2,8 +2,8 @@
   "data": [
     {
       "date": "2023-09-25T00:00:00+00:00",
-      "steps": 18935,
-      "distance": 16254,
+      "steps": 10639,
+      "distance": 8964,
       "flights": 8,
       "move": {
         "total": 500,
@@ -20,16 +20,16 @@
     },
     {
       "date": "2023-09-26T00:00:00+00:00",
-      "steps": 10639,
-      "distance": 8964,
+      "steps": 18935,
+      "distance": 16254,
       "flights": 5,
       "move": {
-        "total": 838,
-        "goal": 650
+        "total": 1002,
+        "goal": 1200
       },
       "exercise": {
         "total": 76,
-        "goal": 30
+        "goal": 120
       },
       "stand": {
         "total": 16,
@@ -50,7 +50,7 @@
         "goal": 30
       },
       "stand": {
-        "total": 12,
+        "total": 11,
         "goal": 12
       }
     }

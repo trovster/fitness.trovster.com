@@ -2,9 +2,9 @@
 
 Simple Web Components for fitness cards and rings.
 
-The components are built styled using [Tailwind](https://tailwindcss.com) and
-the icons are from [Heroicons](https://heroicons.com). The design is based on
-Apple Fitness.
+The the items in this demo are built using
+[Fitness Visualisations](https://github.com/trovster/fitness-visualisations)
+Web Components.
 
 This website is built using [Eleventy](https://www.11ty.dev).
 
@@ -13,11 +13,18 @@ This website is built using [Eleventy](https://www.11ty.dev).
 There are two main web components; a ring and a fully featured card.
 
 ```html
-<fitness-ring>
-</fitness-ring>
+<fitness-ring
+    move-total="item.move.total" move-goal="item.move.goal"
+    exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
+    stand-total="item.stand.total" move-goal="item.stand.goal"
+></fitness-ring>
 
-<fitness-card>
-</fitness-card>
+<fitness-card
+    steps="item.steps" distance="item.distance" flights="item.flights"
+    move-total="item.move.total" move-goal="item.move.goal"
+    exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
+    stand-total="item.stand.total" move-goal="item.stand.goal"
+></fitness-card>
 ```
 
 In this 11ty codebase, the components loop through the `fitness.json` dataset.

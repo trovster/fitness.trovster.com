@@ -26,6 +26,9 @@
     "build": "NODE_ENV=production npx tailwindcss -i ./src/css/site.css -c tailwind.config.js -o ./dist/css/site.css --minify && MY_ENVIRONMENT=production npx @11ty/eleventy",
     "test": "echo \"Warning: No tests\" && exit 0"
   },
+  "dependencies": {
+    "fitness-visualisations": "github:trovster/fitness-visualisations"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
