@@ -24,6 +24,9 @@ module.exports = config => {
   config.addFilter('miles', miles)
   config.addFilter('percent', percent)
   config.addFilter('max', max)
+  config.addFilter('dateSlug', date => {
+    return dateFormat(date, { year: 'numeric', month: 'numeric', day: 'numeric' }).split('/').reverse().join('-')
+  })
 
   config.addPassthroughCopy('CNAME')
   config.addPassthroughCopy({

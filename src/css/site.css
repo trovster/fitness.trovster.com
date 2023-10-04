@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
+main p a {
     @apply text-blue-700 underline decoration-2 underline-offset-2;
     @apply hover:no-underline focus:no-underline;
 }

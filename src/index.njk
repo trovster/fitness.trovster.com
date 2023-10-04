@@ -8,16 +8,17 @@
     </div>
 
     <div class="max-w-4xl mx-auto">
-        <ul class="flex flex-row flex-wrap justify-center gap-2">
+        <ul class="flex flex-row flex-wrap justify-center gap-x-3 gap-y-5">
             {% for item in fitness.data %}
-            <li class="w-full min-w-[50px] max-w-[12%]">
-                <a href="#card--{{ loop.index }}" class="block" title="{{ item.date | dateFormat }}">
+            <li class="w-full min-w-[100px] max-w-[12%]">
+                <a href="#date-{{ item.date | dateSlug }}" class="group flex flex-col items-center space-y-2" title="{{ item.date | dateFormat({ year: 'numeric', month: 'numeric', day: 'numeric' }) }}">
                     <fitness-ring
                         class="muted"
                         move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
                         exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
                         stand-total="{{ item.stand.total }}" stand-goal="{{ item.stand.goal }}"
                     ></fitness-ring>
+                    <span class="group-hover:underline underline-offset-2 decoration-2">{{ item.date | dateFormat({ year: 'numeric', month: 'numeric', day: 'numeric' }) }}</span>
                 </a>
             </li>
             {% endfor %}
@@ -27,7 +28,7 @@
     <div class="max-w-4xl mx-auto">
         <ul class="space-y-6">
             {% for item in fitness.data %}
-            <li id="card--{{ loop.index }}">
+            <li id="date-{{ item.date | dateSlug }}">
                 <fitness-card
                     class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
                     date="{{ item.date | dateFormat }}"
@@ -41,13 +42,13 @@
         </ul>
     </div>
 
-    <div class="max-w-4xl mx-auto !mt-14 pt-12 border-t-2 border-solid border-slate-300 space-y-4 md:text-lg">
+    <div class="max-w-4xl mx-auto !mt-14 pt-12 border-t-2 border-solid border-gray-300 space-y-4 md:text-lg">
         <h2 class="tracking-tight leading-none font-display font-bold text-center text-4xl">The Code</h2>
 
         <p class="max-w-3xl mx-auto">
             You can download the
             <a href="https://github.com/trovster/fitness.trovster.com">repository of this project</a>
-            and configure your `fitness.json` data to generate cards and rings. This uses the
+            and configure your <code>fitness.json</code> data to generate cards and rings. This project uses the
             <a href="https://github.com/trovster/fitness-visualisations">fitness visualisations</a>
             Web Components.
         </p>
@@ -70,7 +71,7 @@
 ></fitness-card>
         {% endhighlight %}
 
-        <p class="max-w-3xl mx-auto">On this example, I am looping thought JSON data that looks like the following.</p>
+        <p class="max-w-3xl mx-auto">The components above are driven by a JSON dataset that looks like the following.</p>
 
         {% highlight 'json' %}
         {{ example | stringify | safe }}
