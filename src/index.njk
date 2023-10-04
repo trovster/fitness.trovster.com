@@ -1,20 +1,55 @@
-<section class="p-6 space-y-6">
-    <div class="max-w-4xl mx-auto space-y-6 text-center">
-        <h1 class="tracking-tight leading-none font-display font-black text-4xl md:text-8xl">
+<section class="p-6 space-y-8">
+    <div class="max-w-4xl mx-auto text-center">
+        <h1 class="tracking-tight leading-none font-display font-black text-4xl md:text-8xl md:leading-[0.75]">
             {{ site.title }}
         </h1>
 
-        <p class="text-lg md:text-xl">{{ site.summary }}</p>
+        <p class="text-lg mt-2 md:text-2xl md:mt-8">{{ site.summary }}</p>
     </div>
 
-    <div class="max-w-4xl mx-auto space-y-4 md:text-lg">
-        <h2 class="tracking-tight leading-none font-display font-bold text-center text-2xl md:text-4xl">The Code</h2>
+    <div class="max-w-4xl mx-auto">
+        <ul class="flex flex-row flex-wrap justify-center gap-2">
+            {% for item in fitness.data %}
+            <li class="w-full min-w-[50px] max-w-[12%]">
+                <a href="#card--{{ loop.index }}" class="block" title="{{ item.date | dateFormat }}">
+                    <fitness-ring
+                        class="muted"
+                        move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
+                        exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
+                        stand-total="{{ item.stand.total }}" stand-goal="{{ item.stand.goal }}"
+                    ></fitness-ring>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+        <ul class="space-y-6">
+            {% for item in fitness.data %}
+            <li id="card--{{ loop.index }}">
+                <fitness-card
+                    class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
+                    date="{{ item.date | dateFormat }}"
+                    steps="{{ item.steps }}" distance="{{ item.distance }}" flights="{{ item.flights }}"
+                    move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
+                    exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
+                    stand-total="{{ item.stand.total }}" stand-goal="{{ item.stand.goal }}"
+                ></fitness-card>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="max-w-4xl mx-auto !mt-14 pt-12 border-t-2 border-solid border-slate-300 space-y-4 md:text-lg">
+        <h2 class="tracking-tight leading-none font-display font-bold text-center text-4xl">The Code</h2>
 
         <p class="max-w-3xl mx-auto">
             You can download the
-            <a href="https://github.com/trovster/fitness.trovster.com" class="underline hover:no-underline focus:no-underline">repository of this project</a>
-            and configure your `fitness.json` data to generate cards and rings. The code in the repository has been organised into
-            different nunjuck components for easiser compartmentalisation.
+            <a href="https://github.com/trovster/fitness.trovster.com">repository of this project</a>
+            and configure your `fitness.json` data to generate cards and rings. This uses the
+            <a href="https://github.com/trovster/fitness-visualisations">fitness visualisations</a>
+            Web Components.
         </p>
 
         <p class="max-w-3xl mx-auto">There are two main web components; a ring and a fully featured card.</p>
@@ -27,6 +62,7 @@
 ></fitness-ring>
 
 <fitness-card
+    date="item.date"
     steps="item.steps" distance="item.distance" flights="item.flights"
     move-total="item.move.total" move-goal="item.move.goal"
     exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
@@ -39,54 +75,5 @@
         {% highlight 'json' %}
         {{ example | stringify | safe }}
         {% endhighlight %}
-    </div>
-
-    <div class="max-w-4xl pt-6 mx-auto space-y-6 text-center">
-        <h2 class="tracking-tight leading-none font-display font-bold text-center text-2xl md:text-4xl">Cards</h2>
-
-        <ul class="space-y-6">
-            {% for item in fitness.data %}
-            <li>
-                <fitness-card
-                    class="{{ 'muted' if loop.index === 3 else ('bright' if loop.index === 2 else '') }} overflow-hidden mt-6 rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
-                    date="{{ item.date | dateFormat }}"
-                    steps="{{ item.steps }}" distance="{{ item.distance }}" flights="{{ item.flights }}"
-                    move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
-                    exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
-                    stand-total="{{ item.stand.total }}" stand-goal="{{ item.stand.goal }}"
-                ></fitness-card>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <div class="max-w-4xl pt-6 mx-auto space-y-6 text-center">
-        <h2 class="tracking-tight leading-none font-display font-bold text-center text-2xl md:text-4xl">Rings</h2>
-
-        <ul class="flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap p-6">
-            {% for item in fitness.data %}
-            <li class="min-w-full sm:min-w-[31%]">
-                <fitness-ring
-                    class="{{ 'muted' if loop.index === 3 else ('bright' if loop.index === 2 else '') }}"
-                    move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
-                    exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
-                    stand-total="{{ item.stand.total }}" stand-goal="{{ item.stand.goal }}"
-                ></fitness-ring>
-            </li>
-            {% endfor %}
-        </ul>
-
-        <ul class="flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap p-6 bg-gray-800 rounded-2xl">
-            {% for item in fitness.data %}
-            <li class="min-w-full sm:min-w-[31%]">
-                <fitness-ring
-                    class="{{ 'muted' if loop.index === 3 else ('bright' if loop.index === 2 else '') }}"
-                    move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
-                    exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
-                    stand-total="{{ item.stand.total }}" stand-goal="{{ item.stand.goal }}"
-                ></fitness-ring>
-            </li>
-            {% endfor %}
-        </ul>
     </div>
 </section>
