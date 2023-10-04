@@ -22,18 +22,22 @@ export default class FitnessRing extends HTMLElement {
     wrapper.innerHTML = this.render();
     this.shadow.appendChild(wrapper);
 
-    this.observer = new IntersectionObserver(
-      elements => {
-        elements.forEach(element => {
-          if (element.isIntersecting) {
-            element.target.classList.add('viewed');
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+    if ('IntersectionObserver' in window) {
+      this.observer = new IntersectionObserver(
+        elements => {
+          elements.forEach(element => {
+            if (element.isIntersecting) {
+              element.target.classList.add('viewed');
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
 
-    this.observer.observe(wrapper);
+      this.observer.observe(wrapper);
+    } else {
+      wrapper.classList.add('viewed');
+    }
   }
 
   disconnectedCallback() {
@@ -81,6 +85,15 @@ export default class FitnessRing extends HTMLElement {
         stroke: var(--fitness-stand, var(--fitness-ring-stand));
         transform: translate(50%, 50%) scale(0.5);
       }
+      .move feDropShadow {
+        flood-color: var(--fitness-move, var(--fitness-ring-move));
+      }
+      .exercise feDropShadow {
+        flood-color: var(--fitness-exercise, var(--fitness-ring-exercise));
+      }
+      .stand feDropShadow {
+        flood-color: var(--fitness-stand, var(--fitness-ring-stand));
+      }
       .viewed .move circle {
         animation: ring 1450ms ease-in-out 50ms forwards;
       }
@@ -124,6 +137,17 @@ export default class FitnessRing extends HTMLElement {
               this.getAttribute('move-goal')
             )}, 100"
           ></circle>
+          <circle
+            stroke-width="3"
+            r="16"
+            class="total"
+            stroke-linecap="round"
+            stroke-dasharray="100, 100"
+            filter="url(#shadow-move)"
+          ></circle>
+          <filter id="shadow-move">
+            <feDropShadow dx="0" dy="0" stdDeviation="0" flood-opacity="0" />
+          </filter>
         </g>
 
         <g class="exercise">
@@ -141,6 +165,17 @@ export default class FitnessRing extends HTMLElement {
               this.getAttribute('exercise-goal')
             )}, 100"
           ></circle>
+          <circle
+            stroke-width="4"
+            r="16"
+            class="total"
+            stroke-linecap="round"
+            stroke-dasharray="100, 100"
+            filter="url(#shadow-exercise)"
+          ></circle>
+          <filter id="shadow-exercise">
+            <feDropShadow dx="0" dy="0" stdDeviation="0" flood-opacity="0" />
+          </filter>
         </g>
 
         <g class="stand">
@@ -158,10 +193,23 @@ export default class FitnessRing extends HTMLElement {
               this.getAttribute('stand-goal')
             )}, 100"
           ></circle>
+          <circle
+            stroke-width="6"
+            r="16"
+            class="total"
+            stroke-linecap="round"
+            stroke-dasharray="100, 100"
+            filter="url(#shadow-stand)"
+          ></circle>
+          <filter id="shadow-stand">
+            <feDropShadow dx="0" dy="0" stdDeviation="0" flood-opacity="0" />
+          </filter>
         </g>
       </svg>
     `;
   }
 }
 
-window.customElements.define('fitness-ring', FitnessRing);
+if ('customElements' in window) {
+  window.customElements.define('fitness-ring', FitnessRing);
+}

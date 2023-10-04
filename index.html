@@ -1,5 +1,5 @@
 <!doctype html>
-<html dir="ltr" lang="en" class="scroll-smooth">
+<html dir="ltr" lang="en" class="scroll-smooth scroll-py-4 scroll-start">
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,28 +23,194 @@
         <link rel="stylesheet" href="https://fitness.trovster.com/css/prism-theme.css"/>
 
         <script type="module" src="https://fitness.trovster.com/js/FitnessCard.js"></script>
-        <script type="module" src="https://fitness.trovster.com/js/FitnessRing.js"></script>
     </head>
 
     <body class="bg-zinc-200 text-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 space-y-6 font-sans ">
         <main>
-            <section class="p-6 space-y-6">
-    <div class="max-w-4xl mx-auto space-y-6 text-center">
-        <h1 class="tracking-tight leading-none font-display font-black text-4xl md:text-8xl">
+            <section class="p-6 space-y-8">
+    <div class="max-w-4xl mx-auto text-center">
+        <h1 class="tracking-tight leading-none font-display font-black text-4xl md:text-8xl md:leading-[0.75]">
             Fitness Web Components
         </h1>
 
-        <p class="text-lg md:text-xl">Simple Web Components for fitness cards and rings.</p>
+        <p class="text-lg mt-2 md:text-2xl md:mt-8">Simple Web Components for fitness cards and rings.</p>
     </div>
 
-    <div class="max-w-4xl mx-auto space-y-4 md:text-lg">
-        <h2 class="tracking-tight leading-none font-display font-bold text-center text-2xl md:text-4xl">The Code</h2>
+    <div class="max-w-4xl mx-auto">
+        <ul class="flex flex-row flex-wrap justify-center gap-2">
+            
+            <li class="w-full min-w-[50px] max-w-[12%]">
+                <a href="#card--1" class="block" title="Monday, 25 September 2023">
+                    <fitness-ring
+                        class="muted"
+                        move-total="500" move-goal="750"
+                        exercise-total="30" exercise-goal="60"
+                        stand-total="8" stand-goal="10"
+                    ></fitness-ring>
+                </a>
+            </li>
+            
+            <li class="w-full min-w-[50px] max-w-[12%]">
+                <a href="#card--2" class="block" title="Tuesday, 26 September 2023">
+                    <fitness-ring
+                        class="muted"
+                        move-total="1002" move-goal="1200"
+                        exercise-total="76" exercise-goal="120"
+                        stand-total="16" stand-goal="12"
+                    ></fitness-ring>
+                </a>
+            </li>
+            
+            <li class="w-full min-w-[50px] max-w-[12%]">
+                <a href="#card--3" class="block" title="Wednesday, 27 September 2023">
+                    <fitness-ring
+                        class="muted"
+                        move-total="412" move-goal="650"
+                        exercise-total="12" exercise-goal="30"
+                        stand-total="11" stand-goal="12"
+                    ></fitness-ring>
+                </a>
+            </li>
+            
+            <li class="w-full min-w-[50px] max-w-[12%]">
+                <a href="#card--4" class="block" title="Thursday, 28 September 2023">
+                    <fitness-ring
+                        class="muted"
+                        move-total="600" move-goal="650"
+                        exercise-total="28" exercise-goal="30"
+                        stand-total="11" stand-goal="12"
+                    ></fitness-ring>
+                </a>
+            </li>
+            
+            <li class="w-full min-w-[50px] max-w-[12%]">
+                <a href="#card--5" class="block" title="Friday, 29 September 2023">
+                    <fitness-ring
+                        class="muted"
+                        move-total="1024" move-goal="650"
+                        exercise-total="71" exercise-goal="30"
+                        stand-total="16" stand-goal="12"
+                    ></fitness-ring>
+                </a>
+            </li>
+            
+            <li class="w-full min-w-[50px] max-w-[12%]">
+                <a href="#card--6" class="block" title="Saturday, 30 September 2023">
+                    <fitness-ring
+                        class="muted"
+                        move-total="412" move-goal="650"
+                        exercise-total="12" exercise-goal="30"
+                        stand-total="11" stand-goal="12"
+                    ></fitness-ring>
+                </a>
+            </li>
+            
+            <li class="w-full min-w-[50px] max-w-[12%]">
+                <a href="#card--7" class="block" title="Sunday, 1 October 2023">
+                    <fitness-ring
+                        class="muted"
+                        move-total="680" move-goal="750"
+                        exercise-total="35" exercise-goal="60"
+                        stand-total="12" stand-goal="10"
+                    ></fitness-ring>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+        <ul class="space-y-6">
+            
+            <li id="card--1">
+                <fitness-card
+                    class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
+                    date="Monday, 25 September 2023"
+                    steps="10639" distance="8964" flights="8"
+                    move-total="500" move-goal="750"
+                    exercise-total="30" exercise-goal="60"
+                    stand-total="8" stand-goal="10"
+                ></fitness-card>
+            </li>
+            
+            <li id="card--2">
+                <fitness-card
+                    class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
+                    date="Tuesday, 26 September 2023"
+                    steps="18935" distance="16254" flights="5"
+                    move-total="1002" move-goal="1200"
+                    exercise-total="76" exercise-goal="120"
+                    stand-total="16" stand-goal="12"
+                ></fitness-card>
+            </li>
+            
+            <li id="card--3">
+                <fitness-card
+                    class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
+                    date="Wednesday, 27 September 2023"
+                    steps="700" distance="1200" flights="3"
+                    move-total="412" move-goal="650"
+                    exercise-total="12" exercise-goal="30"
+                    stand-total="11" stand-goal="12"
+                ></fitness-card>
+            </li>
+            
+            <li id="card--4">
+                <fitness-card
+                    class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
+                    date="Thursday, 28 September 2023"
+                    steps="650" distance="650" flights="4"
+                    move-total="600" move-goal="650"
+                    exercise-total="28" exercise-goal="30"
+                    stand-total="11" stand-goal="12"
+                ></fitness-card>
+            </li>
+            
+            <li id="card--5">
+                <fitness-card
+                    class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
+                    date="Friday, 29 September 2023"
+                    steps="6523" distance="3650" flights="8"
+                    move-total="1024" move-goal="650"
+                    exercise-total="71" exercise-goal="30"
+                    stand-total="16" stand-goal="12"
+                ></fitness-card>
+            </li>
+            
+            <li id="card--6">
+                <fitness-card
+                    class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
+                    date="Saturday, 30 September 2023"
+                    steps="700" distance="1200" flights="3"
+                    move-total="412" move-goal="650"
+                    exercise-total="12" exercise-goal="30"
+                    stand-total="11" stand-goal="12"
+                ></fitness-card>
+            </li>
+            
+            <li id="card--7">
+                <fitness-card
+                    class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
+                    date="Sunday, 1 October 2023"
+                    steps="756" distance="4345" flights="4"
+                    move-total="680" move-goal="750"
+                    exercise-total="35" exercise-goal="60"
+                    stand-total="12" stand-goal="10"
+                ></fitness-card>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="max-w-4xl mx-auto !mt-14 pt-12 border-t-2 border-solid border-slate-300 space-y-4 md:text-lg">
+        <h2 class="tracking-tight leading-none font-display font-bold text-center text-4xl">The Code</h2>
 
         <p class="max-w-3xl mx-auto">
             You can download the
-            <a href="https://github.com/trovster/fitness.trovster.com" class="underline hover:no-underline focus:no-underline">repository of this project</a>
-            and configure your `fitness.json` data to generate cards and rings. The code in the repository has been organised into
-            different nunjuck components for easiser compartmentalisation.
+            <a href="https://github.com/trovster/fitness.trovster.com">repository of this project</a>
+            and configure your `fitness.json` data to generate cards and rings. This uses the
+            <a href="https://github.com/trovster/fitness-visualisations">fitness visualisations</a>
+            Web Components.
         </p>
 
         <p class="max-w-3xl mx-auto">There are two main web components; a ring and a fully featured card.</p>
@@ -56,6 +222,7 @@
 <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fitness-ring</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fitness-card</span>
+    <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.date<span class="token punctuation">"</span></span>
     <span class="token attr-name">steps</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.steps<span class="token punctuation">"</span></span> <span class="token attr-name">distance</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.distance<span class="token punctuation">"</span></span> <span class="token attr-name">flights</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.flights<span class="token punctuation">"</span></span>
     <span class="token attr-name">move-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.total<span class="token punctuation">"</span></span> <span class="token attr-name">move-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.goal<span class="token punctuation">"</span></span>
     <span class="token attr-name">exercise-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.total<span class="token punctuation">"</span></span> <span class="token attr-name">exercise-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.goal<span class="token punctuation">"</span></span>
@@ -82,113 +249,6 @@
 		<span class="token property">"goal"</span><span class="token operator">:</span> <span class="token number">10</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-    </div>
-
-    <div class="max-w-4xl pt-6 mx-auto space-y-6 text-center">
-        <h2 class="tracking-tight leading-none font-display font-bold text-center text-2xl md:text-4xl">Cards</h2>
-
-        <ul class="space-y-6">
-            
-            <li>
-                <fitness-card
-                    class=" overflow-hidden mt-6 rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
-                    date="Monday, 25 September 2023"
-                    steps="10639" distance="8964" flights="8"
-                    move-total="500" move-goal="750"
-                    exercise-total="30" exercise-goal="60"
-                    stand-total="8" stand-goal="10"
-                ></fitness-card>
-            </li>
-            
-            <li>
-                <fitness-card
-                    class="bright overflow-hidden mt-6 rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
-                    date="Tuesday, 26 September 2023"
-                    steps="18935" distance="16254" flights="5"
-                    move-total="1002" move-goal="1200"
-                    exercise-total="76" exercise-goal="120"
-                    stand-total="16" stand-goal="12"
-                ></fitness-card>
-            </li>
-            
-            <li>
-                <fitness-card
-                    class="muted overflow-hidden mt-6 rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
-                    date="Wednesday, 27 September 2023"
-                    steps="700" distance="1200" flights="3"
-                    move-total="412" move-goal="650"
-                    exercise-total="12" exercise-goal="30"
-                    stand-total="11" stand-goal="12"
-                ></fitness-card>
-            </li>
-            
-        </ul>
-    </div>
-
-    <div class="max-w-4xl pt-6 mx-auto space-y-6 text-center">
-        <h2 class="tracking-tight leading-none font-display font-bold text-center text-2xl md:text-4xl">Rings</h2>
-
-        <ul class="flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap p-6">
-            
-            <li class="min-w-full sm:min-w-[31%]">
-                <fitness-ring
-                    class=""
-                    move-total="500" move-goal="750"
-                    exercise-total="30" exercise-goal="60"
-                    stand-total="8" stand-goal="10"
-                ></fitness-ring>
-            </li>
-            
-            <li class="min-w-full sm:min-w-[31%]">
-                <fitness-ring
-                    class="bright"
-                    move-total="1002" move-goal="1200"
-                    exercise-total="76" exercise-goal="120"
-                    stand-total="16" stand-goal="12"
-                ></fitness-ring>
-            </li>
-            
-            <li class="min-w-full sm:min-w-[31%]">
-                <fitness-ring
-                    class="muted"
-                    move-total="412" move-goal="650"
-                    exercise-total="12" exercise-goal="30"
-                    stand-total="11" stand-goal="12"
-                ></fitness-ring>
-            </li>
-            
-        </ul>
-
-        <ul class="flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap p-6 bg-gray-800 rounded-2xl">
-            
-            <li class="min-w-full sm:min-w-[31%]">
-                <fitness-ring
-                    class=""
-                    move-total="500" move-goal="750"
-                    exercise-total="30" exercise-goal="60"
-                    stand-total="8" stand-goal="10"
-                ></fitness-ring>
-            </li>
-            
-            <li class="min-w-full sm:min-w-[31%]">
-                <fitness-ring
-                    class="bright"
-                    move-total="1002" move-goal="1200"
-                    exercise-total="76" exercise-goal="120"
-                    stand-total="16" stand-goal="12"
-                ></fitness-ring>
-            </li>
-            
-            <li class="min-w-full sm:min-w-[31%]">
-                <fitness-ring
-                    class="muted"
-                    move-total="412" move-goal="650"
-                    exercise-total="12" exercise-goal="30"
-                    stand-total="11" stand-goal="12"
-                ></fitness-ring>
-            </li>
-            
-        </ul>
     </div>
 </section>
 
