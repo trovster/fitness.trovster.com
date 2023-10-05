@@ -57,7 +57,7 @@
             Web Components.
         </p>
 
-        <p class="max-w-3xl mx-auto">There are two main web components; a ring and a fully featured card.</p>
+        <p class="max-w-3xl mx-auto">There are two web components; the fully featured fitness cards, with custom icons and the activity rings.</p>
 
         {% highlight 'html' %}
 <fitness-ring
@@ -72,7 +72,11 @@
     move-total="item.move.total" move-goal="item.move.goal"
     exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
     stand-total="item.stand.total" move-goal="item.stand.goal"
-></fitness-card>
+>
+    <svg slot="icon-move">…</svg>
+    <svg slot="icon-exercise">…</svg>
+    <svg slot="icon-stand">…</svg>
+</fitness-card>
         {% endhighlight %}
 
         <p class="max-w-3xl mx-auto">The components above are driven by a JSON dataset that looks like the following.</p>
