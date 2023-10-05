@@ -13,7 +13,7 @@
         <meta name="apple-mobile-web-app-title" content="Fitness Web Components"/>
         <meta name="application-name" content="Fitness Web Components"/>
 
-        <title>Fitness Web Components — Simple Web Components for fitness cards and rings.</title>
+        <title>Fitness Web Components — Simple Web Components for fitness cards and activity rings.</title>
 
         <script type="text/javascript">
             document.getElementsByTagName('html')[0].className += ' js';
@@ -28,12 +28,12 @@
     <body class="bg-zinc-200 text-zinc-800 dark:bg-zinc-900 dark:text-zinc-300 space-y-6 font-sans ">
         <main>
             <section class="p-6 space-y-8">
-    <div class="max-w-4xl mx-auto text-center">
+    <div class="max-w-3xl mx-auto text-center">
         <h1 class="tracking-tight leading-none font-display font-black text-4xl md:text-8xl md:leading-[0.75]">
             Fitness Web Components
         </h1>
 
-        <p class="text-lg mt-2 md:text-2xl md:mt-8">Simple Web Components for fitness cards and rings.</p>
+        <p class="text-lg mt-2 md:text-2xl md:mt-8">Simple Web Components for fitness cards and activity rings.</p>
     </div>
 
     <div class="max-w-4xl mx-auto">
@@ -307,18 +307,32 @@
         </ul>
     </div>
 
-    <div class="max-w-4xl mx-auto !mt-14 pt-12 border-t-2 border-solid border-gray-300 space-y-4 md:text-lg">
-        <h2 class="tracking-tight leading-none font-display font-bold text-center text-4xl">The Code</h2>
+    <div class="max-w-4xl mx-auto !mt-14 pt-12 border-t-2 border-solid border-gray-300 dark:border-gray-700 space-y-4 md:text-lg">
+        <h2 class="tracking-tight leading-none font-display font-bold text-center text-4xl mb-8">The Code</h2>
 
+        <p class="max-w-3xl mx-auto text-lg md:text-2xl">
+            This is an <a href="https://www.11ty.dev">Eleventy</a>-based project
+            demoing the <a href="https://github.com/trovster/fitness-visualisations">fitness visualisations</a>
+            Web Components and custom styling.
+        </p>
         <p class="max-w-3xl mx-auto">
             You can download the
             <a href="https://github.com/trovster/fitness.trovster.com">repository of this project</a>
-            and configure your <code>fitness.json</code> data to generate cards and rings. This project uses the
-            <a href="https://github.com/trovster/fitness-visualisations">fitness visualisations</a>
-            Web Components.
+            and configure your <code>fitness.json</code> data to generate fitness cards and activity rings.
+            You can integrate with an API and customise the design of the components.
         </p>
 
-        <p class="max-w-3xl mx-auto">There are two web components; the fully featured fitness cards, with custom icons and the activity rings.</p>
+        <p class="max-w-3xl mx-auto">
+            There are two web components used in this demo; the clickable activity rings at the top
+            and the fully featured fitness cards, which are <em>replayable</em> and
+            have custom icons from <a href="https://heroicons.com">Heroicons</a>. You can see
+            more customisation in the
+            <a href="https://trovster.github.io/fitness-visualisations">fitness visualisations demo</a>.
+        </p>
+
+        <p class="max-w-3xl mx-auto">
+            Below is how the components are built, using the JSON data.
+        </p>
 
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fitness-ring</span>
     <span class="token attr-name">move-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.total<span class="token punctuation">"</span></span> <span class="token attr-name">move-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.goal<span class="token punctuation">"</span></span>
