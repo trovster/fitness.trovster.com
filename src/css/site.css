@@ -13,10 +13,12 @@ fitness-card {
 
 fitness-card::part(header) {
     @apply border-0 border-b-2 border-zinc-200 border-solid py-6 mb-8;
+    @apply dark:border-zinc-900;
 }
 
 fitness-card::part(footer) {
     @apply border-0 border-t-2 border-zinc-200 border-solid py-6 mt-8;
+    @apply dark:border-zinc-900;
 }
 
 fitness-card::part(ring) {
