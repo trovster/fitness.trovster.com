@@ -22,16 +22,22 @@ There are two main web components; a ring and a fully featured card.
 ></fitness-ring>
 
 <fitness-card
+    date="item.date"
+    replayable="true"
     steps="item.steps" distance="item.distance" flights="item.flights"
     move-total="item.move.total" move-goal="item.move.goal"
     exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
     stand-total="item.stand.total" move-goal="item.stand.goal"
-></fitness-card>
+>
+    <svg slot="icon-move">…</svg>
+    <svg slot="icon-exercise">…</svg>
+    <svg slot="icon-stand">…</svg>
+</fitness-card>
 ```
 
-In this 11ty codebase, the components loop through the `fitness.json` dataset.
-
-Each card component expects JSON data that looks like the following.
+In this [Eleventy](https://www.11ty.dev) codebase, the components loop through
+the `fitness.json` dataset. Each card component expects JSON data that looks
+like the following.
 
 ```json
 {

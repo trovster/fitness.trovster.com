@@ -1,5 +1,5 @@
 <section class="p-6 space-y-8">
-    <div class="max-w-4xl mx-auto text-center">
+    <div class="max-w-3xl mx-auto text-center">
         <h1 class="tracking-tight leading-none font-display font-black text-4xl md:text-8xl md:leading-[0.75]">
             {{ site.title }}
         </h1>
@@ -47,18 +47,32 @@
         </ul>
     </div>
 
-    <div class="max-w-4xl mx-auto !mt-14 pt-12 border-t-2 border-solid border-gray-300 space-y-4 md:text-lg">
-        <h2 class="tracking-tight leading-none font-display font-bold text-center text-4xl">The Code</h2>
+    <div class="max-w-4xl mx-auto !mt-14 pt-12 border-t-2 border-solid border-gray-300 dark:border-gray-700 space-y-4 md:text-lg">
+        <h2 class="tracking-tight leading-none font-display font-bold text-center text-4xl mb-8">The Code</h2>
 
+        <p class="max-w-3xl mx-auto text-lg md:text-2xl">
+            This is an <a href="https://www.11ty.dev">Eleventy</a>-based project
+            demoing the <a href="https://github.com/trovster/fitness-visualisations">fitness visualisations</a>
+            Web Components and custom styling.
+        </p>
         <p class="max-w-3xl mx-auto">
             You can download the
             <a href="https://github.com/trovster/fitness.trovster.com">repository of this project</a>
-            and configure your <code>fitness.json</code> data to generate cards and rings. This project uses the
-            <a href="https://github.com/trovster/fitness-visualisations">fitness visualisations</a>
-            Web Components.
+            and configure your <code>fitness.json</code> data to generate fitness cards and activity rings.
+            You can integrate with an API and customise the design of the components.
         </p>
 
-        <p class="max-w-3xl mx-auto">There are two web components; the fully featured fitness cards, with custom icons and the activity rings.</p>
+        <p class="max-w-3xl mx-auto">
+            There are two web components used in this demo; the clickable activity rings at the top
+            and the fully featured fitness cards, which are <em>replayable</em> and
+            have custom icons from <a href="https://heroicons.com">Heroicons</a>. You can see
+            more customisation in the
+            <a href="https://trovster.github.io/fitness-visualisations">fitness visualisations demo</a>.
+        </p>
+
+        <p class="max-w-3xl mx-auto">
+            Below is how the components are built, using the JSON data.
+        </p>
 
         {% highlight 'html' %}
 <fitness-ring

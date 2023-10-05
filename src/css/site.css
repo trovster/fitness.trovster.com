@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 main p a {
-    @apply text-blue-700 underline decoration-2 underline-offset-2;
+    @apply text-sky-500 underline decoration-2 underline-offset-2;
     @apply hover:no-underline focus:no-underline;
 }
 
@@ -31,8 +31,10 @@ fitness-card::part(ring) {
     --fitness-stand: theme(colors.teal.400);
 }
 
-.bright {
-    --fitness-move: theme(colors.blue.600);
-    --fitness-exercise: theme(colors.emerald.600);
-    --fitness-stand: theme(colors.fuchsia.600);
+@media (prefers-color-scheme: dark) {
+    .muted {
+        --fitness-move: theme(colors.fuchsia.600);
+        --fitness-exercise: theme(colors.blue.600);
+        --fitness-stand: theme(colors.emerald.600);
+    }
 }
