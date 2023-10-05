@@ -1,12 +1,14 @@
 # Fitness Web Component
 
-Simple Web Components for fitness cards and rings.
+Simple Web Components for fitness cards and activity rings.
 
-The the items in this demo are built using
+The items in this demo are built using
 [Fitness Visualisations](https://github.com/trovster/fitness-visualisations)
 Web Components.
 
-This website is built using [Eleventy](https://www.11ty.dev).
+This website is built using [Eleventy](https://www.11ty.dev), styled using
+[Tailwind](https://tailwindcss.com) and the icons are from
+[Heroicons](https://heroicons.com).
 
 ## The Code
 

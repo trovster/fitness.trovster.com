@@ -36,7 +36,11 @@
                     move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
                     exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
                     stand-total="{{ item.stand.total }}" stand-goal="{{ item.stand.goal }}"
-                ></fitness-card>
+                >
+                    {% svg 'move', { slot: 'icon-move' } %}
+                    {% svg 'exercise', { slot: 'icon-exercise' } %}
+                    {% svg 'stand', { slot: 'icon-stand' } %}
+                </fitness-card>
             </li>
             {% endfor %}
         </ul>
