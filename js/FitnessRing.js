@@ -27,7 +27,7 @@ export default class FitnessRing extends HTMLElement {
         elements => {
           elements.forEach(element => {
             if (element.isIntersecting) {
-              element.target.classList.add('viewed');
+              element.target.classList.add('visible');
             }
           });
         },
@@ -36,8 +36,31 @@ export default class FitnessRing extends HTMLElement {
 
       this.observer.observe(wrapper);
     } else {
-      wrapper.classList.add('viewed');
+      wrapper.classList.add('visible');
     }
+
+    wrapper.addEventListener('click', () => {
+      if (wrapper.classList.contains('complete')) {
+        wrapper.classList.add('reset');
+        wrapper.classList.remove('complete');
+      }
+    });
+
+    wrapper.addEventListener('animationstart', () => {
+      wrapper.classList.remove('complete');
+    });
+
+    wrapper.addEventListener('animationend', () => {
+      if (wrapper.classList.contains('reset')) {
+        wrapper.classList.remove('reset');
+        wrapper.classList.remove('visible');
+
+        void wrapper.offsetWidth;
+        wrapper.classList.add('visible');
+      } else {
+        window.setTimeout(() => wrapper.classList.add('complete'), 50);
+      }
+    });
   }
 
   disconnectedCallback() {
@@ -83,14 +106,25 @@ export default class FitnessRing extends HTMLElement {
         stroke: var(--fitness-stand, var(--fitness-ring-stand));
         transform: translate(50%, 50%) scale(0.5);
       }
-      .viewed .move circle {
-        animation: ring 1450ms ease-in-out 50ms forwards;
+      .visible circle:not(.base) {
+        animation: ease-in-out forwards ring;
       }
-      .viewed .exercise circle {
-        animation: ring 1200ms ease-in-out 300ms forwards;
+      .visible .move circle:not(.base) {
+        animation-delay: 50ms;
+        animation-duration: 1450ms;
       }
-      .viewed .stand circle {
-        animation: ring 950ms ease-in-out 550ms forwards;
+      .visible .exercise circle:not(.base) {
+        animation-delay: 300ms;
+        animation-duration: 1200ms;
+      }
+      .visible .stand circle:not(.base) {
+        animation-delay: 550ms;
+        animation-duration: 950ms;
+      }
+      .reset.reset circle:not(.base) {
+        animation-delay: 0;
+        animation-fill-mode: backwards;
+        animation-name: ring-reverse;
       }
       .icons {
         position: absolute; top: 0; right: 0; bottom: 0; left: 0;
@@ -119,6 +153,11 @@ export default class FitnessRing extends HTMLElement {
           stroke-dashoffset: 0;
         }
       }
+      @keyframes ring-reverse {
+        from {
+          stroke-dashoffset: 0;
+        }
+      }
       @media (prefers-reduced-motion) {
         .move circle,
         .exercise circle,
@@ -142,7 +181,7 @@ export default class FitnessRing extends HTMLElement {
             stroke-dashoffset="${this.percentage(
               this.getAttribute('move-total'),
               this.getAttribute('move-goal')
-            )}"
+            ) - 1}"
             stroke-dasharray="${this.percentage(
               this.getAttribute('move-total'),
               this.getAttribute('move-goal')
@@ -159,7 +198,7 @@ export default class FitnessRing extends HTMLElement {
             stroke-dashoffset="${this.percentage(
               this.getAttribute('exercise-total'),
               this.getAttribute('exercise-goal')
-            )}"
+            ) - 1}"
             stroke-dasharray="${this.percentage(
               this.getAttribute('exercise-total'),
               this.getAttribute('exercise-goal')
@@ -176,7 +215,7 @@ export default class FitnessRing extends HTMLElement {
             stroke-dashoffset="${this.percentage(
               this.getAttribute('stand-total'),
               this.getAttribute('stand-goal')
-            )}"
+            ) - 1}"
             stroke-dasharray="${this.percentage(
               this.getAttribute('stand-total'),
               this.getAttribute('stand-goal')
