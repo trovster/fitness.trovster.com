@@ -186,6 +186,7 @@ export default class FitnessCard extends HTMLElement {
         letter-spacing: 0;
       }
       [part="header"] {
+        display: block;
         margin: 0 0 1rem;
         padding: 1rem 0.5rem 0;
         font-size: 1.25rem;
@@ -200,6 +201,7 @@ export default class FitnessCard extends HTMLElement {
         justify-content: space-evenly;
       }
       [part="footer"] {
+        display: block;
         margin: 1rem 0 0;
         padding: 0 0.5rem 1rem;
       }
@@ -264,33 +266,26 @@ export default class FitnessCard extends HTMLElement {
     `;
   }
 
-  header = () =>
-    this.hasHeader()
-      ? `
-    <div part="header">
-      ${this.date(this.getAttribute('date'))}
-    </div>
-  `
-      : '<slot part="header" name="header"></slot>';
+  header = () => `<slot part="header" name="header">${this.hasHeader() ? this.date(this.getAttribute('date')) : ''}</slot>`;
 
   stats = () => `
     <dl part="stats">
       <div>
-        <dt>Move</dt>
+        <dt><slot name="move">Move</slot></dt>
         <dd class="text-move">
           ${this.move()}<abbr title="Kilocalories">Kcal</abbr>
         </dd>
       </div>
 
       <div>
-        <dt>Exercise</dt>
+        <dt><slot name="exercise">Exercise</slot></dt>
         <dd class="text-exercise">
           ${this.exercise()}<abbr title="Minutes">min</abbr>
         </dd>
       </div>
 
       <div>
-        <dt>Stand</dt>
+        <dt><slot name="stand">Stand</slot></dt>
         <dd class="text-stand">
           ${this.stand()}<abbr title="Hours">hrs</abbr>
         </dd>
@@ -356,7 +351,11 @@ export default class FitnessCard extends HTMLElement {
           exercise-goal="${this.getAttribute('exercise-goal')}"
           stand-total="${this.getAttribute('stand-total')}"
           stand-goal="${this.getAttribute('stand-goal')}"
-        ></fitness-ring>
+        >
+          <slot slot="icon-move" name="icon-move"></slot>
+          <slot slot="icon-exercise" name="icon-exercise"></slot>
+          <slot slot="icon-stand" name="icon-stand"></slot>
+        </fitness-ring>
       </div>
 
       ${this.footer()}
