@@ -32,6 +32,7 @@
                 <fitness-card
                     class="overflow-hidden rounded-3xl mx-auto bg-gray-800 text-white max-w-3xl"
                     date="{{ item.date | dateFormat }}"
+                    replayable="true"
                     steps="{{ item.steps }}" distance="{{ item.distance }}" flights="{{ item.flights }}"
                     move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
                     exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
@@ -68,6 +69,7 @@
 
 <fitness-card
     date="item.date"
+    replayable="true"
     steps="item.steps" distance="item.distance" flights="item.flights"
     move-total="item.move.total" move-goal="item.move.goal"
     exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
