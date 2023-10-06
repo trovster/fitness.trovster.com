@@ -43,9 +43,9 @@
                 <a href="#date-2023-09-25" class="group flex flex-col items-center space-y-2" title="25/09/2023">
                     <fitness-ring
                         class="muted"
-                        move-total="500" move-goal="750"
-                        exercise-total="30" exercise-goal="60"
-                        stand-total="8" stand-goal="10"
+                        calories-total="500" calories-goal="750"
+                        minutes-total="30" minutes-goal="60"
+                        hours-total="8" hours-goal="10"
                     ></fitness-ring>
                     <span class="group-hover:underline underline-offset-2 decoration-2">25/09/2023</span>
                 </a>
@@ -55,9 +55,9 @@
                 <a href="#date-2023-09-26" class="group flex flex-col items-center space-y-2" title="26/09/2023">
                     <fitness-ring
                         class="muted"
-                        move-total="1002" move-goal="1200"
-                        exercise-total="76" exercise-goal="120"
-                        stand-total="16" stand-goal="12"
+                        calories-total="1002" calories-goal="1200"
+                        minutes-total="76" minutes-goal="120"
+                        hours-total="16" hours-goal="12"
                     ></fitness-ring>
                     <span class="group-hover:underline underline-offset-2 decoration-2">26/09/2023</span>
                 </a>
@@ -67,9 +67,9 @@
                 <a href="#date-2023-09-27" class="group flex flex-col items-center space-y-2" title="27/09/2023">
                     <fitness-ring
                         class="muted"
-                        move-total="412" move-goal="650"
-                        exercise-total="12" exercise-goal="30"
-                        stand-total="11" stand-goal="12"
+                        calories-total="412" calories-goal="650"
+                        minutes-total="12" minutes-goal="30"
+                        hours-total="11" hours-goal="12"
                     ></fitness-ring>
                     <span class="group-hover:underline underline-offset-2 decoration-2">27/09/2023</span>
                 </a>
@@ -79,9 +79,9 @@
                 <a href="#date-2023-09-28" class="group flex flex-col items-center space-y-2" title="28/09/2023">
                     <fitness-ring
                         class="muted"
-                        move-total="600" move-goal="650"
-                        exercise-total="28" exercise-goal="30"
-                        stand-total="11" stand-goal="12"
+                        calories-total="600" calories-goal="650"
+                        minutes-total="28" minutes-goal="30"
+                        hours-total="11" hours-goal="12"
                     ></fitness-ring>
                     <span class="group-hover:underline underline-offset-2 decoration-2">28/09/2023</span>
                 </a>
@@ -91,9 +91,9 @@
                 <a href="#date-2023-09-29" class="group flex flex-col items-center space-y-2" title="29/09/2023">
                     <fitness-ring
                         class="muted"
-                        move-total="1024" move-goal="650"
-                        exercise-total="71" exercise-goal="30"
-                        stand-total="16" stand-goal="12"
+                        calories-total="1024" calories-goal="650"
+                        minutes-total="71" minutes-goal="30"
+                        hours-total="16" hours-goal="12"
                     ></fitness-ring>
                     <span class="group-hover:underline underline-offset-2 decoration-2">29/09/2023</span>
                 </a>
@@ -103,9 +103,9 @@
                 <a href="#date-2023-09-30" class="group flex flex-col items-center space-y-2" title="30/09/2023">
                     <fitness-ring
                         class="muted"
-                        move-total="412" move-goal="650"
-                        exercise-total="12" exercise-goal="30"
-                        stand-total="11" stand-goal="12"
+                        calories-total="412" calories-goal="650"
+                        minutes-total="12" minutes-goal="30"
+                        hours-total="11" hours-goal="12"
                     ></fitness-ring>
                     <span class="group-hover:underline underline-offset-2 decoration-2">30/09/2023</span>
                 </a>
@@ -115,9 +115,9 @@
                 <a href="#date-2023-10-01" class="group flex flex-col items-center space-y-2" title="01/10/2023">
                     <fitness-ring
                         class="muted"
-                        move-total="680" move-goal="750"
-                        exercise-total="35" exercise-goal="60"
-                        stand-total="12" stand-goal="10"
+                        calories-total="680" calories-goal="750"
+                        minutes-total="35" minutes-goal="60"
+                        hours-total="12" hours-goal="10"
                     ></fitness-ring>
                     <span class="group-hover:underline underline-offset-2 decoration-2">01/10/2023</span>
                 </a>
@@ -135,19 +135,22 @@
                     date="Monday, 25 September 2023"
                     replayable="true"
                     steps="10639" distance="8964" flights="8"
-                    move-total="500" move-goal="750"
-                    exercise-total="30" exercise-goal="60"
-                    stand-total="8" stand-goal="10"
+                    calories-total="500" calories-goal="750"
+                    minutes-total="30" minutes-goal="60"
+                    hours-total="8" hours-goal="10"
                 >
-                    <svg slot="icon-move" viewBox="0 0 20 20">
+                    <div slot="calories">Move</div>
+                    <div slot="minutes">Exercise</div>
+                    <div slot="hours">Stand</div>
+                    <svg slot="label-calories" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-exercise" viewBox="0 0 20 20">
+                    <svg slot="label-minutes" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 01.919-.53l4.78 1.281a.75.75 0 01.531.919l-1.281 4.78a.75.75 0 01-1.449-.387l.81-3.022a19.407 19.407 0 00-5.594 5.203.75.75 0 01-1.139.093L7 10.06l-4.72 4.72a.75.75 0 01-1.06-1.061l5.25-5.25a.75.75 0 011.06 0l3.074 3.073a20.923 20.923 0 015.545-4.931l-3.042-.815a.75.75 0 01-.53-.919z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-stand" viewBox="0 0 20 20">
+                    <svg slot="label-hours" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"></path>
 </svg>
 
@@ -160,19 +163,22 @@
                     date="Tuesday, 26 September 2023"
                     replayable="true"
                     steps="18935" distance="16254" flights="5"
-                    move-total="1002" move-goal="1200"
-                    exercise-total="76" exercise-goal="120"
-                    stand-total="16" stand-goal="12"
+                    calories-total="1002" calories-goal="1200"
+                    minutes-total="76" minutes-goal="120"
+                    hours-total="16" hours-goal="12"
                 >
-                    <svg slot="icon-move" viewBox="0 0 20 20">
+                    <div slot="calories">Move</div>
+                    <div slot="minutes">Exercise</div>
+                    <div slot="hours">Stand</div>
+                    <svg slot="label-calories" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-exercise" viewBox="0 0 20 20">
+                    <svg slot="label-minutes" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 01.919-.53l4.78 1.281a.75.75 0 01.531.919l-1.281 4.78a.75.75 0 01-1.449-.387l.81-3.022a19.407 19.407 0 00-5.594 5.203.75.75 0 01-1.139.093L7 10.06l-4.72 4.72a.75.75 0 01-1.06-1.061l5.25-5.25a.75.75 0 011.06 0l3.074 3.073a20.923 20.923 0 015.545-4.931l-3.042-.815a.75.75 0 01-.53-.919z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-stand" viewBox="0 0 20 20">
+                    <svg slot="label-hours" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"></path>
 </svg>
 
@@ -185,19 +191,22 @@
                     date="Wednesday, 27 September 2023"
                     replayable="true"
                     steps="700" distance="1200" flights="3"
-                    move-total="412" move-goal="650"
-                    exercise-total="12" exercise-goal="30"
-                    stand-total="11" stand-goal="12"
+                    calories-total="412" calories-goal="650"
+                    minutes-total="12" minutes-goal="30"
+                    hours-total="11" hours-goal="12"
                 >
-                    <svg slot="icon-move" viewBox="0 0 20 20">
+                    <div slot="calories">Move</div>
+                    <div slot="minutes">Exercise</div>
+                    <div slot="hours">Stand</div>
+                    <svg slot="label-calories" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-exercise" viewBox="0 0 20 20">
+                    <svg slot="label-minutes" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 01.919-.53l4.78 1.281a.75.75 0 01.531.919l-1.281 4.78a.75.75 0 01-1.449-.387l.81-3.022a19.407 19.407 0 00-5.594 5.203.75.75 0 01-1.139.093L7 10.06l-4.72 4.72a.75.75 0 01-1.06-1.061l5.25-5.25a.75.75 0 011.06 0l3.074 3.073a20.923 20.923 0 015.545-4.931l-3.042-.815a.75.75 0 01-.53-.919z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-stand" viewBox="0 0 20 20">
+                    <svg slot="label-hours" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"></path>
 </svg>
 
@@ -210,19 +219,22 @@
                     date="Thursday, 28 September 2023"
                     replayable="true"
                     steps="650" distance="650" flights="4"
-                    move-total="600" move-goal="650"
-                    exercise-total="28" exercise-goal="30"
-                    stand-total="11" stand-goal="12"
+                    calories-total="600" calories-goal="650"
+                    minutes-total="28" minutes-goal="30"
+                    hours-total="11" hours-goal="12"
                 >
-                    <svg slot="icon-move" viewBox="0 0 20 20">
+                    <div slot="calories">Move</div>
+                    <div slot="minutes">Exercise</div>
+                    <div slot="hours">Stand</div>
+                    <svg slot="label-calories" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-exercise" viewBox="0 0 20 20">
+                    <svg slot="label-minutes" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 01.919-.53l4.78 1.281a.75.75 0 01.531.919l-1.281 4.78a.75.75 0 01-1.449-.387l.81-3.022a19.407 19.407 0 00-5.594 5.203.75.75 0 01-1.139.093L7 10.06l-4.72 4.72a.75.75 0 01-1.06-1.061l5.25-5.25a.75.75 0 011.06 0l3.074 3.073a20.923 20.923 0 015.545-4.931l-3.042-.815a.75.75 0 01-.53-.919z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-stand" viewBox="0 0 20 20">
+                    <svg slot="label-hours" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"></path>
 </svg>
 
@@ -235,19 +247,22 @@
                     date="Friday, 29 September 2023"
                     replayable="true"
                     steps="6523" distance="3650" flights="8"
-                    move-total="1024" move-goal="650"
-                    exercise-total="71" exercise-goal="30"
-                    stand-total="16" stand-goal="12"
+                    calories-total="1024" calories-goal="650"
+                    minutes-total="71" minutes-goal="30"
+                    hours-total="16" hours-goal="12"
                 >
-                    <svg slot="icon-move" viewBox="0 0 20 20">
+                    <div slot="calories">Move</div>
+                    <div slot="minutes">Exercise</div>
+                    <div slot="hours">Stand</div>
+                    <svg slot="label-calories" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-exercise" viewBox="0 0 20 20">
+                    <svg slot="label-minutes" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 01.919-.53l4.78 1.281a.75.75 0 01.531.919l-1.281 4.78a.75.75 0 01-1.449-.387l.81-3.022a19.407 19.407 0 00-5.594 5.203.75.75 0 01-1.139.093L7 10.06l-4.72 4.72a.75.75 0 01-1.06-1.061l5.25-5.25a.75.75 0 011.06 0l3.074 3.073a20.923 20.923 0 015.545-4.931l-3.042-.815a.75.75 0 01-.53-.919z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-stand" viewBox="0 0 20 20">
+                    <svg slot="label-hours" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"></path>
 </svg>
 
@@ -260,19 +275,22 @@
                     date="Saturday, 30 September 2023"
                     replayable="true"
                     steps="700" distance="1200" flights="3"
-                    move-total="412" move-goal="650"
-                    exercise-total="12" exercise-goal="30"
-                    stand-total="11" stand-goal="12"
+                    calories-total="412" calories-goal="650"
+                    minutes-total="12" minutes-goal="30"
+                    hours-total="11" hours-goal="12"
                 >
-                    <svg slot="icon-move" viewBox="0 0 20 20">
+                    <div slot="calories">Move</div>
+                    <div slot="minutes">Exercise</div>
+                    <div slot="hours">Stand</div>
+                    <svg slot="label-calories" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-exercise" viewBox="0 0 20 20">
+                    <svg slot="label-minutes" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 01.919-.53l4.78 1.281a.75.75 0 01.531.919l-1.281 4.78a.75.75 0 01-1.449-.387l.81-3.022a19.407 19.407 0 00-5.594 5.203.75.75 0 01-1.139.093L7 10.06l-4.72 4.72a.75.75 0 01-1.06-1.061l5.25-5.25a.75.75 0 011.06 0l3.074 3.073a20.923 20.923 0 015.545-4.931l-3.042-.815a.75.75 0 01-.53-.919z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-stand" viewBox="0 0 20 20">
+                    <svg slot="label-hours" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"></path>
 </svg>
 
@@ -285,19 +303,22 @@
                     date="Sunday, 1 October 2023"
                     replayable="true"
                     steps="756" distance="4345" flights="4"
-                    move-total="680" move-goal="750"
-                    exercise-total="35" exercise-goal="60"
-                    stand-total="12" stand-goal="10"
+                    calories-total="680" calories-goal="750"
+                    minutes-total="35" minutes-goal="60"
+                    hours-total="12" hours-goal="10"
                 >
-                    <svg slot="icon-move" viewBox="0 0 20 20">
+                    <div slot="calories">Move</div>
+                    <div slot="minutes">Exercise</div>
+                    <div slot="hours">Stand</div>
+                    <svg slot="label-calories" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-exercise" viewBox="0 0 20 20">
+                    <svg slot="label-minutes" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M12.577 4.878a.75.75 0 01.919-.53l4.78 1.281a.75.75 0 01.531.919l-1.281 4.78a.75.75 0 01-1.449-.387l.81-3.022a19.407 19.407 0 00-5.594 5.203.75.75 0 01-1.139.093L7 10.06l-4.72 4.72a.75.75 0 01-1.06-1.061l5.25-5.25a.75.75 0 011.06 0l3.074 3.073a20.923 20.923 0 015.545-4.931l-3.042-.815a.75.75 0 01-.53-.919z" clip-rule="evenodd"></path>
 </svg>
 
-                    <svg slot="icon-stand" viewBox="0 0 20 20">
+                    <svg slot="label-hours" viewBox="0 0 20 20">
   <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"></path>
 </svg>
 
@@ -335,22 +356,25 @@
         </p>
 
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fitness-ring</span>
-    <span class="token attr-name">move-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.total<span class="token punctuation">"</span></span> <span class="token attr-name">move-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.goal<span class="token punctuation">"</span></span>
-    <span class="token attr-name">exercise-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.total<span class="token punctuation">"</span></span> <span class="token attr-name">exercise-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.goal<span class="token punctuation">"</span></span>
-    <span class="token attr-name">stand-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.stand.total<span class="token punctuation">"</span></span> <span class="token attr-name">move-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.stand.goal<span class="token punctuation">"</span></span>
+    <span class="token attr-name">calories-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.total<span class="token punctuation">"</span></span> <span class="token attr-name">calories-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.goal<span class="token punctuation">"</span></span>
+    <span class="token attr-name">minutes-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.total<span class="token punctuation">"</span></span> <span class="token attr-name">minutes-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.goal<span class="token punctuation">"</span></span>
+    <span class="token attr-name">hours-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.stand.total<span class="token punctuation">"</span></span> <span class="token attr-name">hours-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.stand.goal<span class="token punctuation">"</span></span>
 <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fitness-ring</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fitness-card</span>
     <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.date<span class="token punctuation">"</span></span>
     <span class="token attr-name">replayable</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span>
     <span class="token attr-name">steps</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.steps<span class="token punctuation">"</span></span> <span class="token attr-name">distance</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.distance<span class="token punctuation">"</span></span> <span class="token attr-name">flights</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.flights<span class="token punctuation">"</span></span>
-    <span class="token attr-name">move-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.total<span class="token punctuation">"</span></span> <span class="token attr-name">move-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.goal<span class="token punctuation">"</span></span>
-    <span class="token attr-name">exercise-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.total<span class="token punctuation">"</span></span> <span class="token attr-name">exercise-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.goal<span class="token punctuation">"</span></span>
-    <span class="token attr-name">stand-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.stand.total<span class="token punctuation">"</span></span> <span class="token attr-name">move-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.stand.goal<span class="token punctuation">"</span></span>
+    <span class="token attr-name">calories-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.total<span class="token punctuation">"</span></span> <span class="token attr-name">calories-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.move.goal<span class="token punctuation">"</span></span>
+    <span class="token attr-name">minutes-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.total<span class="token punctuation">"</span></span> <span class="token attr-name">minutes-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.exercise.goal<span class="token punctuation">"</span></span>
+    <span class="token attr-name">hours-total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.stand.total<span class="token punctuation">"</span></span> <span class="token attr-name">hours-goal</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>item.stand.goal<span class="token punctuation">"</span></span>
 <span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon-move<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon-exercise<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon-stand<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calories<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Move<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>minutes<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Exercise<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hours<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Stand<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon-calories<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon-minutes<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon-hours<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fitness-card</span><span class="token punctuation">></span></span></code></pre>
 
         <p class="max-w-3xl mx-auto">The components above are driven by a JSON dataset that looks like the following.</p>
