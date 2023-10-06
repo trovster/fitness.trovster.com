@@ -14,9 +14,9 @@
                 <a href="#date-{{ item.date | dateSlug }}" class="group flex flex-col items-center space-y-2" title="{{ item.date | dateFormat({ year: 'numeric', month: 'numeric', day: 'numeric' }) }}">
                     <fitness-ring
                         class="muted"
-                        move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
-                        exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
-                        stand-total="{{ item.stand.total }}" stand-goal="{{ item.stand.goal }}"
+                        calories-total="{{ item.move.total }}" calories-goal="{{ item.move.goal }}"
+                        minutes-total="{{ item.exercise.total }}" minutes-goal="{{ item.exercise.goal }}"
+                        hours-total="{{ item.stand.total }}" hours-goal="{{ item.stand.goal }}"
                     ></fitness-ring>
                     <span class="group-hover:underline underline-offset-2 decoration-2">{{ item.date | dateFormat({ year: 'numeric', month: 'numeric', day: 'numeric' }) }}</span>
                 </a>
@@ -34,13 +34,16 @@
                     date="{{ item.date | dateFormat }}"
                     replayable="true"
                     steps="{{ item.steps }}" distance="{{ item.distance }}" flights="{{ item.flights }}"
-                    move-total="{{ item.move.total }}" move-goal="{{ item.move.goal }}"
-                    exercise-total="{{ item.exercise.total }}" exercise-goal="{{ item.exercise.goal }}"
-                    stand-total="{{ item.stand.total }}" stand-goal="{{ item.stand.goal }}"
+                    calories-total="{{ item.move.total }}" calories-goal="{{ item.move.goal }}"
+                    minutes-total="{{ item.exercise.total }}" minutes-goal="{{ item.exercise.goal }}"
+                    hours-total="{{ item.stand.total }}" hours-goal="{{ item.stand.goal }}"
                 >
-                    {% svg 'move', { slot: 'icon-move' } %}
-                    {% svg 'exercise', { slot: 'icon-exercise' } %}
-                    {% svg 'stand', { slot: 'icon-stand' } %}
+                    <div slot="calories">Move</div>
+                    <div slot="minutes">Exercise</div>
+                    <div slot="hours">Stand</div>
+                    {% svg 'move', { slot: 'label-calories' } %}
+                    {% svg 'exercise', { slot: 'label-minutes' } %}
+                    {% svg 'stand', { slot: 'label-hours' } %}
                 </fitness-card>
             </li>
             {% endfor %}
@@ -76,22 +79,25 @@
 
         {% highlight 'html' %}
 <fitness-ring
-    move-total="item.move.total" move-goal="item.move.goal"
-    exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
-    stand-total="item.stand.total" move-goal="item.stand.goal"
+    calories-total="item.move.total" calories-goal="item.move.goal"
+    minutes-total="item.exercise.total" minutes-goal="item.exercise.goal"
+    hours-total="item.stand.total" hours-goal="item.stand.goal"
 ></fitness-ring>
 
 <fitness-card
     date="item.date"
     replayable="true"
     steps="item.steps" distance="item.distance" flights="item.flights"
-    move-total="item.move.total" move-goal="item.move.goal"
-    exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
-    stand-total="item.stand.total" move-goal="item.stand.goal"
+    calories-total="item.move.total" calories-goal="item.move.goal"
+    minutes-total="item.exercise.total" minutes-goal="item.exercise.goal"
+    hours-total="item.stand.total" hours-goal="item.stand.goal"
 >
-    <svg slot="icon-move">…</svg>
-    <svg slot="icon-exercise">…</svg>
-    <svg slot="icon-stand">…</svg>
+    <div slot="calories">Move</div>
+    <div slot="minutes">Exercise</div>
+    <div slot="hours">Stand</div>
+    <svg slot="icon-calories">…</svg>
+    <svg slot="icon-minutes">…</svg>
+    <svg slot="icon-hours">…</svg>
 </fitness-card>
         {% endhighlight %}
 

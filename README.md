@@ -16,22 +16,25 @@ There are two main web components; a ring and a fully featured card.
 
 ```html
 <fitness-ring
-    move-total="item.move.total" move-goal="item.move.goal"
-    exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
-    stand-total="item.stand.total" move-goal="item.stand.goal"
+    calories-total="item.move.total" calories-goal="item.move.goal"
+    minutes-total="item.exercise.total" minutes-goal="item.exercise.goal"
+    hours-total="item.stand.total" hours-goal="item.stand.goal"
 ></fitness-ring>
 
 <fitness-card
     date="item.date"
     replayable="true"
     steps="item.steps" distance="item.distance" flights="item.flights"
-    move-total="item.move.total" move-goal="item.move.goal"
-    exercise-total="item.exercise.total" exercise-goal="item.exercise.goal"
-    stand-total="item.stand.total" move-goal="item.stand.goal"
+    calories-total="item.move.total" calories-goal="item.move.goal"
+    minutes-total="item.exercise.total" minutes-goal="item.exercise.goal"
+    hours-total="item.stand.total" hours-goal="item.stand.goal"
 >
-    <svg slot="icon-move">…</svg>
-    <svg slot="icon-exercise">…</svg>
-    <svg slot="icon-stand">…</svg>
+    <div slot="calories">Move</div>
+    <div slot="minutes">Exercise</div>
+    <div slot="hours">Stand</div>
+    <svg slot="label-calories">…</svg>
+    <svg slot="label-minutes">…</svg>
+    <svg slot="label-hours">…</svg>
 </fitness-card>
 ```
 

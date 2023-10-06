@@ -26,15 +26,15 @@ fitness-card::part(ring) {
 }
 
 .muted {
-    --fitness-move: theme(colors.pink.400);
-    --fitness-exercise: theme(colors.sky.400);
-    --fitness-stand: theme(colors.teal.400);
+    --fitness-calories: theme(colors.pink.300);
+    --fitness-minutes: theme(colors.teal.300);
+    --fitness-hours: theme(colors.sky.300);
 }
 
 @media (prefers-color-scheme: dark) {
     .muted {
-        --fitness-move: theme(colors.fuchsia.600);
-        --fitness-exercise: theme(colors.blue.600);
-        --fitness-stand: theme(colors.emerald.600);
+        --fitness-calories: theme(colors.pink.900);
+        --fitness-minutes: theme(colors.teal.900);
+        --fitness-hours: theme(colors.sky.900);
     }
 }
