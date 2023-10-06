@@ -31,8 +31,8 @@ module.exports = config => {
   config.addPassthroughCopy('CNAME')
   config.addPassthroughCopy({
     'node_modules/prismjs/themes/prism-okaidia.min.css': 'css/prism-theme.css',
-    'node_modules/fitness-visualisations/src/FitnessCard.js': 'js/FitnessCard.js',
-    'node_modules/fitness-visualisations/src/FitnessRing.js': 'js/FitnessRing.js'
+    'node_modules/@trovster/fitness-visualisations/src/FitnessCard.js': 'js/FitnessCard.js',
+    'node_modules/@trovster/fitness-visualisations/src/FitnessRing.js': 'js/FitnessRing.js'
   })
 
   return {
