@@ -28,7 +28,7 @@
     "test": "echo \"Warning: No tests\" && exit 0"
   },
   "dependencies": {
-    "@trovster/fitness-visualisations": "^1.0.0"
+    "@trovster/fitness-visualisations": "^1.0.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
